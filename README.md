@@ -1,14 +1,14 @@
-## ServerCraft, a Minecraft Bedrock Edition server software, open source for all to use.
+# ServerCraft, a Minecraft Bedrock Edition server software, open source for all to use.
 A PocketMine-MP distro, written in PHP, open source for all to use.
-# For developers
+## For developers
  * [Buildind ServerCraft](BUILDING.md)
-# Donate
+## Donate
 - [Patreon](https://www.patreon.com/tobypayneyt)
 
-# Licensing information
+## Licensing information
 This project is licensed under LGPL-3.0. Please see the [LICENSE](/LICENSE) file for details.
 
-## Want to help out?
+# Want to help out?
 Wanna help out? Just edit a file, submit the fork, and i'll review it!
 
 Servercraft is not affiliated with Mojang. All brands and trademarks belong to their respective owners. ServerCraftis not a Mojang-approved software, nor is it associated with Mojang.
