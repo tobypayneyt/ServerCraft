@@ -3,7 +3,7 @@ A PocketMine-MP distro, written in PHP, open source for all to use.
 ## For developers
  * [Building ServerCraft](BUILDING.md)
 ## Donate
-- [Patreon](https://www.patreon.com/tobypayneyt)
+- [Patreon](https://www.patreon.com/tobypayne)
 
 ## Licensing information
 This project is licensed under LGPL-3.0. Please see the [LICENSE](/LICENSE) file for details.
