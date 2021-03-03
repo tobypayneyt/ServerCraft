@@ -1,7 +1,7 @@
 # ServerCraft, a Minecraft Bedrock Edition server software, open source for all to use.
 A PocketMine-MP distro, written in PHP, open source for all to use.
 ## For developers
- * [Buildind ServerCraft](BUILDING.md)
+ * [Building ServerCraft](BUILDING.md)
 ## Donate
 - [Patreon](https://www.patreon.com/tobypayneyt)
 
