@@ -1337,7 +1337,7 @@ class Server{
 				"white-list" => false,
 				"announce-player-achievements" => true,
 				"spawn-protection" => 16,
-				"max-players" => 20,
+				"max-players" => 10,
 				"gamemode" => 0,
 				"force-gamemode" => false,
 				"hardcore" => false,
@@ -1456,7 +1456,7 @@ class Server{
 			$this->banByIP = new BanList($this->dataPath . "banned-ips.txt");
 			$this->banByIP->load();
 
-			$this->maxPlayers = $this->getConfigInt("max-players", 20);
+			$this->maxPlayers = $this->getConfigInt("max-players", 10);
 			$this->setAutoSave($this->getConfigBool("auto-save", true));
 
 			$this->onlineMode = $this->getConfigBool("xbox-auth", true);
@@ -1833,7 +1833,7 @@ class Server{
 
 		$this->logger->info("Reloading properties...");
 		$this->properties->reload();
-		$this->maxPlayers = $this->getConfigInt("max-players", 20);
+		$this->maxPlayers = $this->getConfigInt("max-players", 10);
 
 		if($this->getConfigBool("hardcore", false) and $this->getDifficulty() < Level::DIFFICULTY_HARD){
 			$this->setConfigInt("difficulty", Level::DIFFICULTY_HARD);
