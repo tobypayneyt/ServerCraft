@@ -16,11 +16,11 @@ if($php -ne ""){
 }
 
 if($file -eq ""){
-	if(Test-Path "PocketMine-MP.phar"){
-	    $file = "PocketMine-MP.phar"
+	if(Test-Path "ServerCraft.phar"){
+	    $file = "ServerCraft.phar"
 	}else{
-	    echo "PocketMine-MP.phar not found"
-	    echo "Downloads can be found at https://github.com/pmmp/PocketMine-MP/releases"
+	    echo "ServerCraft.phar not found"
+	    echo "Downloads can be found at https://github.com/tobypayneyt/ServerCraft/releases"
 	    pause
 	    exit 1
 	}
