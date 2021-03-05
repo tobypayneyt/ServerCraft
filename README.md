@@ -1,4 +1,3 @@
-[![Documentation Status](https://readthedocs.org/projects/servercraft-website/badge/?version=latest)](https://servercraft-website.readthedocs.io/en/latest/?badge=latest)
 # ServerCraft, a Minecraft Bedrock Edition server software, open source for all to use.
 A PocketMine-MP distro, written in PHP, open source for all to use.
 ## Website
