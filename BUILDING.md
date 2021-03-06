@@ -6,15 +6,15 @@
 - [`composer`](https://getcomposer.org) available in your shell
 
 ## Custom PHP binaries
-Because PocketMine-MP requires several non-standard PHP extensions and configuration, PMMP provides scripts to build custom binaries for running PocketMine-MP, as well as prebuilt binaries.
+Because ServerCraft requires several non-standard PHP extensions and configuration, PMMP (what ServerCraft is based on) provides scripts to build custom binaries for running PocketMine-MP, as well as prebuilt binaries.
 
-- [Prebuilt binaries](https://jenkins.pmmp.io/job/PHP-7.3-Aggregate)
+- [Prebuilt binaries - let me know if this is outdated and errors on the website.](https://jenkins.pmmp.io/job/PHP-7.4-Aggregate) If it is outdated, email me (contact.tobypayneyt@gmail.com)
 - [Compile scripts](https://github.com/pmmp/php-build-scripts) are provided as a submodule in the path `build/php`
 
 If you use a custom binary, you'll need to replace `composer` usages in this guide with `path/to/your/php path/to/your/composer.phar`.
 
 ## Setting up environment
-1. `git clone --recursive https://github.com/pmmp/PocketMine-MP.git`
+1. `git clone --recursive https://github.com/tobypayneyt/ServerCraft.git`
 2. `composer install`
 
 ## Checking out a different branch to build
@@ -29,16 +29,16 @@ If you use a custom binary, you'll need to replace `composer` usages in this gui
 ### Note
 Preprocessor requires that the `cpp` (c preprocessor) is available in your PATH.
 
-## Building `PocketMine-MP.phar`
-Run `composer make-server` using your preferred PHP binary. It'll drop a `PocketMine-MP.phar` into the current working directory.
+## Building `ServerCraft.phar`
+Run `composer make-server` using your preferred PHP binary. It'll drop a `ServerCraft.phar` into the current working directory.
 
 You can also use the `--out` option to change the output filename.
 
 There is a bug in PHP that might cause an error which looks like this:
 ```
-Fatal error: Uncaught BadMethodCallException: unable to create temporary file in PocketMine-MP/build/server-phar.php:119
+Fatal error: Uncaught BadMethodCallException: unable to create temporary file in ServerCraft/build/server-phar.php:119
 ```
 You can work around it by setting `ulimit -n` to some bigger number, e.g. `8192`, or by updating your PHP version to at least 7.4.16 or 8.0.3.
 
-## Running PocketMine-MP from source code
+## Running ServerCraft from source code
 Run `src/pocketmine/PocketMine.php` using your preferred PHP binary.

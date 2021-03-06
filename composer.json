@@ -2,7 +2,7 @@
    "name": "pocketmine/pocketmine-mp",
    "description": "A PocketMine-MP distro, written in PHP, open source for all to use.",
    "type": "project",
-   "homepage": "https://servercraft.cf",
+   "homepage": "https://servercraftpe.cf",
    "license": "LGPL-3.0",
    "require": {
       "php": "^7.3 || ^8.0",
