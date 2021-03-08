@@ -1337,7 +1337,7 @@ class Server{
 				"white-list" => false,
 				"announce-player-achievements" => true,
 				"spawn-protection" => 16,
-				"max-players" => 10,
+				"max-players" => 20,
 				"gamemode" => 0,
 				"force-gamemode" => false,
 				"hardcore" => false,
@@ -1367,7 +1367,7 @@ class Server{
 				$this->logger->emergency($this->baseLang->translateString("pocketmine.server.devBuild.error2"));
 				$this->logger->emergency($this->baseLang->translateString("pocketmine.server.devBuild.error3"));
 				$this->logger->emergency($this->baseLang->translateString("pocketmine.server.devBuild.error4", ["settings.enable-dev-builds"]));
-				$this->logger->emergency($this->baseLang->translateString("pocketmine.server.devBuild.error5", ["https://github.com/pmmp/PocketMine-MP/releases"]));
+				$this->logger->emergency($this->baseLang->translateString("pocketmine.server.devBuild.error5", ["https://github.com/tobypayneyt/ServerCraft/releases"]));
 				$this->forceShutdown();
 				return;
 			}
@@ -1456,13 +1456,12 @@ class Server{
 			$this->banByIP = new BanList($this->dataPath . "banned-ips.txt");
 			$this->banByIP->load();
 
-			$this->maxPlayers = $this->getConfigInt("max-players", 10);
+			$this->maxPlayers = $this->getConfigInt("max-players", 20);
 			$this->setAutoSave($this->getConfigBool("auto-save", true));
 
 			$this->onlineMode = $this->getConfigBool("xbox-auth", true);
 			if($this->onlineMode){
-				$this->logger->notice($this->getLanguage()->translateString("pocketmine.server.auth.enabled"));
-				$this->logger->notice($this->getLanguage()->translateString("pocketmine.server.authProperty.enabled"));
+				$this->logger->info($this->getLanguage()->translateString("pocketmine.server.auth.enabled"));
 			}else{
 				$this->logger->warning($this->getLanguage()->translateString("pocketmine.server.auth.disabled"));
 				$this->logger->warning($this->getLanguage()->translateString("pocketmine.server.authWarning"));
@@ -1833,7 +1832,7 @@ class Server{
 
 		$this->logger->info("Reloading properties...");
 		$this->properties->reload();
-		$this->maxPlayers = $this->getConfigInt("max-players", 10);
+		$this->maxPlayers = $this->getConfigInt("max-players", 20);
 
 		if($this->getConfigBool("hardcore", false) and $this->getDifficulty() < Level::DIFFICULTY_HARD){
 			$this->setConfigInt("difficulty", Level::DIFFICULTY_HARD);
@@ -1987,7 +1986,7 @@ class Server{
 
 		$this->logger->info($this->getLanguage()->translateString("pocketmine.server.defaultGameMode", [self::getGamemodeString($this->getGamemode())]));
 
-		$this->logger->info($this->getLanguage()->translateString("pocketmine.server.donate", [TextFormat::AQUA . "https://patreon.com/pocketminemp" . TextFormat::RESET]));
+		$this->logger->info($this->getLanguage()->translateString("pocketmine.server.donate", [TextFormat::AQUA . "https://patreon.com/pocketminemp" . TextFormat::RESET], [TextFormat::GREEN . "https://patreon.com/tobypayneyt" . TextFormat::RESET]));
 		$this->logger->info($this->getLanguage()->translateString("pocketmine.server.startFinished", [round(microtime(true) - \pocketmine\START_TIME, 3)]));
 
 		$this->tickProcessor();

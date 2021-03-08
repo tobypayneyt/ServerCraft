@@ -44,7 +44,7 @@ use const PHP_EOL;
 use const STDIN;
 
 class SetupWizard{
-	public const DEFAULT_NAME = \pocketmine\NAME . " Server";
+	public const DEFAULT_NAME = "Servercraft Minecraft Server";
 	public const DEFAULT_PORT = 19132;
 	public const DEFAULT_PLAYERS = 20;
 	public const DEFAULT_GAMEMODE = Player::SURVIVAL;
@@ -110,7 +110,7 @@ class SetupWizard{
 	}
 
 	private function showLicense() : bool{
-		$this->message($this->lang->translateString("welcome_to_pocketmine", [\pocketmine\NAME]));
+		$this->message($this->lang->translateString("welcome_to_servercraft"));
 		echo <<<LICENSE
 
   This program is free software: you can redistribute it and/or modify
@@ -121,7 +121,7 @@ class SetupWizard{
 LICENSE;
 		$this->writeLine();
 		if(strtolower($this->getInput($this->lang->get("accept_license"), "n", "y/N")) !== "y"){
-			$this->error($this->lang->translateString("you_have_to_accept_the_license", [\pocketmine\NAME]));
+			$this->error($this->lang->translateString("you_have_to_accept_the_license"));
 			sleep(5);
 
 			return false;
@@ -243,7 +243,7 @@ LICENSE;
 	private function endWizard() : void{
 		$this->message($this->lang->get("you_have_finished"));
 		$this->message($this->lang->get("pocketmine_plugins"));
-		$this->message($this->lang->translateString("pocketmine_will_start", [\pocketmine\NAME]));
+		$this->message($this->lang->translateString("pocketmine_will_start"));
 
 		$this->writeLine();
 		$this->writeLine();
