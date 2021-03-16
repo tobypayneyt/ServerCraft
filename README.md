@@ -1,3 +1,4 @@
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/tobypayneyt/servercraft.svg)](http://github.com/tobypayneyt/servercraft/issues "Percentage of issues still open")[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/tobypayneyt/servercraft.svg)](http://github.com/tobypayneyt/servercraft/issues "Average time to resolve an issue")
 # ServerCraft, a Minecraft Bedrock Edition server software, open source for all to use.
 A PocketMine-MP distro, written in PHP, open source for all to use.
 ## Website
