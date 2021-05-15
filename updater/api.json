@@ -1,0 +1,16 @@
+{
+    "job": "ServerCraft",
+    "php_version": "7.4", // php version, usually 7.4
+    "base_version": "1.1.0", // servercraft version
+    "build_number": 1,
+    "is_dev": false,
+    "branch": "stable",
+    "git_commit": "'.$gitcommit.'", // like https://github.com/pmmp/PocketMine-MP/commit/ this part --> 89260d788cd5962bd1a659795a04d717ae04315c
+    "mcpe_version": "1.16.220", // something like 1.16.220
+    "phar_name": "ServerCraft.phar",
+    "dummy": "",
+    "build": 1,
+    "date": "1621076400000", // use https://www.online-toolz.com/tools/date-functions.php
+    "details_url": "", // something like https://github.com/tobypayneyt/servercraft/releases/<version>
+    "download_url": "" // something like https://github.com/tobypayneyt/servercraft/releases/download/<version>/ServerCraft.phar
+}

@@ -1,16 +1,6 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Comparison operation \"\\>\\=\" between 0 and 2 is always false\\.$#"
-			count: 1
-			path: ../../../src/pocketmine/block/Liquid.php
-
-		-
-			message: "#^If condition is always false\\.$#"
-			count: 1
-			path: ../../../src/pocketmine/block/Liquid.php
-
-		-
 			message: "#^Call to function is_resource\\(\\) with resource will always evaluate to true\\.$#"
 			count: 3
 			path: ../../../src/pocketmine/command/CommandReader.php
@@ -31,12 +21,12 @@ parameters:
 			path: ../../../src/pocketmine/network/mcpe/protocol/DataPacket.php
 
 		-
-			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
+			message: "#^Parameter \\#1 \\$ of closure expects TMemberType, TMemberType given\\.$#"
 			count: 1
 			path: ../../../src/pocketmine/utils/Utils.php
 
 		-
-			message: "#^Parameter \\#1 \\$ of closure expects TMemberType, TMemberType given\\.$#"
+			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
 			count: 1
 			path: ../../../src/pocketmine/utils/Utils.php
 

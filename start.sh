@@ -8,7 +8,7 @@ while getopts "p:f:l" OPTION 2> /dev/null; do
 			PHP_BINARY="$OPTARG"
 			;;
 		f)
-			SERVERCRAFT_FILE="$OPTARG"
+			POCKETMINE_FILE="$OPTARG"
 			;;
 		l)
 			DO_LOOP="yes"
@@ -31,12 +31,12 @@ if [ "$PHP_BINARY" == "" ]; then
 	fi
 fi
 
-if [ "$SERVERCRAFT_FILE" == "" ]; then
-	if [ -f ./ServerCraft.phar ]; then
-		SERVERCRAFT_FILE="./ServerCraft.phar"
+if [ "$POCKETMINE_FILE" == "" ]; then
+	if [ -f ./PocketMine-MP.phar ]; then
+		POCKETMINE_FILE="./PocketMine-MP.phar"
 	else
-		echo "ServerCraft.phar not found"
-		echo "Downloads can be found at https://github.com/tobypayneyt/ServerCraft/releases"
+		echo "PocketMine-MP.phar not found"
+		echo "Downloads can be found at https://github.com/pmmp/PocketMine-MP/releases"
 		exit 1
 	fi
 fi
@@ -50,12 +50,12 @@ if [ "$DO_LOOP" == "yes" ]; then
 		if [ ${LOOPS} -gt 0 ]; then
 			echo "Restarted $LOOPS times"
 		fi
-		"$PHP_BINARY" "$SERVERCRAFT_FILE" $@
+		"$PHP_BINARY" "$POCKETMINE_FILE" $@
 		echo "To escape the loop, press CTRL+C now. Otherwise, wait 5 seconds for the server to restart."
 		echo ""
 		sleep 5
 		((LOOPS++))
 	done
 else
-	exec "$PHP_BINARY" "$SERVERCRAFT_FILE" $@
+	exec "$PHP_BINARY" "$POCKETMINE_FILE" $@
 fi
