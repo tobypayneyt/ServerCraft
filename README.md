@@ -13,5 +13,6 @@ This project is licensed under LGPL-3.0. Please see the [LICENSE](/LICENSE) file
 
 # Want to help out?
 Wanna help out? Just edit a file, submit the fork, and i'll review it!
+Just make sure to do it on [this repository](https://github.com/tpguy825/pocketmine-mp).
 
 Servercraft is not affiliated with Mojang. All brands and trademarks belong to their respective owners. ServerCraftis not a Mojang-approved software, nor is it associated with Mojang.
